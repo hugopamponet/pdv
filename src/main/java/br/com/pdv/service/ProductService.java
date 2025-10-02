@@ -32,12 +32,15 @@ public class ProductService {
 	
 	public List<ProductDTO> getAllProduct() {
 		return productRepository.findAll().stream().map(product -> {
+			
 		ProductDTO dto = new ProductDTO();
 		dto.setName(product.getName());
 		dto.setAmount(product.getAmount());
 		dto.setDescription(product.getDescription());
 		dto.setPrice(product.getPrice());
+		
 		return dto;
+		
 	}).collect(Collectors.toList());
 	}
 }
