@@ -1,0 +1,92 @@
+:root {
+  --primary: #1E3A8A;        /* Azul marinho */
+  --secondary: #2563EB;      /* Azul médio */
+  --success: #10B981;        /* Verde sucesso */
+  --danger: #EF4444;         /* Vermelho alerta */
+  --background: #F3F4F6;     /* Cinza claro */
+  --text-primary: #111827;   /* Texto principal */
+  --text-secondary: #6B7280; /* Texto secundário */
+  --white: #FFFFFF;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Inter", Arial, sans-serif;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  color: var(--primary);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+main {
+  background-color: var(--white);
+  width: 380px;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 5px;
+  display: block;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+button.submit {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--secondary);
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 10px;
+}
+
+button.submit:hover {
+  background-color: var(--primary);
+  transform: scale(1.02);
+}

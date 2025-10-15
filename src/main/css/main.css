@@ -1,0 +1,13 @@
+.menuPrincipal {
+    display: flex;
+	
+}
+
+.menuPrincipal nav ul {
+    display: flex;
+}
+
+.imgMenu {
+    height: 50px;
+    cursor: pointer;
+}
