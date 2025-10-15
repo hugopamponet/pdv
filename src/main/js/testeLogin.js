@@ -18,14 +18,13 @@ form.addEventListener('submit', async function(event) {
 
         if (response.ok) {
             const message = await response.text();
-            alert(message);
-            window.location.href = "../main.html";
+            window.location.href = "main.html";
         } else if (response.status === 401) {
             alert("Usuário ou senha inválidos!");
         } else {
-            alert("Erro desconhecido: " + response.status);
+            console.log("Erro desconhecido: " + response.status);
         }
     } catch (error) {
-        alert("Erro na conexão com o backend: " + error);
+        console.log("Erro na conexão com o backend: " + error);
     }
 });
